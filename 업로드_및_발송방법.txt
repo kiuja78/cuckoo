@@ -1,0 +1,40 @@
+쿠쿠 디지털 명함 고객 발송 준비 방법
+
+1. 압축을 풉니다.
+2. GitHub 저장소의 배포 폴더에 아래 파일을 그대로 업로드합니다.
+
+필수 업로드 파일
+- index.html
+- card1.html
+- card2.html
+- card3.html
+- preview.html
+- cuckoo_kimgeonil.vcf
+- assets 폴더 전체
+
+3. GitHub Pages 주소를 확인합니다.
+예시:
+https://kiuja78.github.io/cuckoo/
+
+4. 고객에게 보낼 때는 index.html 주소를 사용합니다.
+예시:
+https://kiuja78.github.io/cuckoo/
+
+5. 시안별 직접 링크
+- 시안1: https://kiuja78.github.io/cuckoo/card1.html
+- 시안2: https://kiuja78.github.io/cuckoo/card2.html
+- 시안3: https://kiuja78.github.io/cuckoo/card3.html
+
+6. 최종 발송 전 휴대폰에서 꼭 확인할 항목
+- 시안 1, 2, 3 탭 이동
+- 전화 상담하기
+- 문자 상담하기
+- 카카오톡 상담하기
+- 제품 상담 버튼
+- 혜택 상담 버튼
+- 연락처 저장하기
+- 홈페이지 보기
+
+7. 고객 발송 전 권장 방식
+- 링크만 단독으로 보내지 말고, 짧은 안내문과 함께 발송합니다.
+- '개인정보 입력 없음', '앱 설치 없음', '전화/문자/카카오 상담 연결용' 문구를 함께 넣으면 고객이 더 안심합니다.

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang='ko'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
+<title>쿠쿠 렌탈 김건일 팀장 디지털 명함</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#f4efe7;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif}
+body{min-height:100svh}
+.page{width:min(100vw,520px);margin:0 auto;background:#f4efe7;min-height:100svh}
+.visual{position:relative;width:100%;line-height:0;background:#f4efe7;overflow:hidden}
+.visual img{display:block;width:100%;height:auto;line-height:0}
+.hot{position:absolute;border:0;background:rgba(255,255,255,0);z-index:5;border-radius:16px;cursor:pointer}
+.hot:active{background:rgba(0,120,255,.13)}
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.38);z-index:40;opacity:0;pointer-events:none;transition:.18s}
+.sheet-bg.open{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,110%);width:min(100vw,520px);background:#fff;z-index:41;border-radius:24px 24px 0 0;padding:19px 16px calc(18px + env(safe-area-inset-bottom));box-shadow:0 -18px 48px rgba(0,0,0,.25);transition:.22s;color:#20251d}
+.sheet.open{transform:translate(-50%,0)}
+.sheet h3{font-size:20px;margin:0 0 8px;letter-spacing:-.6px}
+.sheet p{font-size:14px;line-height:1.45;color:#5d6659;margin:0 0 13px}
+.links{display:grid;gap:10px}
+.sheet a,.sheet button{width:100%;min-height:54px;border:0;border-radius:16px;display:flex;align-items:center;justify-content:center;background:#66795d;color:#fff;font-size:16px;font-weight:900;text-decoration:none}
+.sheet .close{margin-top:10px;background:#eeece8;color:#20251d}
+.preview-tabs{position:sticky;top:0;z-index:20;background:rgba(244,239,231,.88);backdrop-filter:blur(12px);padding:10px}
+.preview-tabs .inner{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;background:#fff;padding:6px;border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.08)}
+.preview-tabs a{display:flex;align-items:center;justify-content:center;text-decoration:none;border-radius:999px;padding:10px 6px;font-size:13px;font-weight:900;color:#4d5c46}
+.preview-tabs a.active{background:#66795d;color:#fff}
+</style>
+</head>
+<body>
+<main class='page'>
+
+<div class='preview-tabs'>
+  <div class='inner'>
+    <a href='card1.html' class=''>시안 1</a>
+    <a href='card2.html' class=''>시안 2</a>
+    <a href='card3.html' class='active'>시안 3</a>
+  </div>
+</div>
+
+<section class='visual'>
+<img src='assets/card3.png' alt='쿠쿠 렌탈 김건일 팀장 디지털 명함'>
+
+<button class='hot' style='left:6%;top:35.0%;width:28%;height:7.0%' data-action='call'></button>
+<button class='hot' style='left:36%;top:35.0%;width:28%;height:7.0%' data-action='sms'></button>
+<button class='hot' style='left:66%;top:35.0%;width:28%;height:7.0%' data-action='kakao'></button>
+<button class='hot' style='left:6%;top:50.0%;width:14%;height:8.0%' data-product='정수기'></button>
+<button class='hot' style='left:21%;top:50.0%;width:14%;height:8.0%' data-product='비데'></button>
+<button class='hot' style='left:36%;top:50.0%;width:14%;height:8.0%' data-product='공기청정기'></button>
+<button class='hot' style='left:51%;top:50.0%;width:14%;height:8.0%' data-product='인덕션'></button>
+<button class='hot' style='left:66%;top:50.0%;width:14%;height:8.0%' data-product='매트리스'></button>
+<button class='hot' style='left:81%;top:50.0%;width:13%;height:8.0%' data-product='기타 제품'></button>
+
+<button class='hot' style='left:7%;top:70.5%;width:42%;height:5.5%' data-product='신규 렌탈'></button>
+<button class='hot' style='left:7%;top:76.0%;width:42%;height:5.5%' data-product='만기 고객 교체'></button>
+<button class='hot' style='left:7%;top:81.5%;width:42%;height:5.0%' data-product='멤버십 가입'></button>
+<button class='hot' style='left:51%;top:70.5%;width:42%;height:7.5%' data-product='리퍼브 특가'></button>
+<button class='hot' style='left:51%;top:78.0%;width:42%;height:7.5%' data-product='소상공인 맞춤'></button>
+
+<button class='hot' style='left:7%;top:91.0%;width:42%;height:6.0%' data-action='save'></button>
+<button class='hot' style='left:51%;top:91.0%;width:42%;height:6.0%' data-action='home'></button>
+
+</section>
+</main>
+
+<div id='sheetBg' class='sheet-bg'></div>
+<div id='sheet' class='sheet'>
+  <h3 id='sheetTitle'>상담 연결</h3>
+  <p id='sheetDesc'>원하시는 연결 방식을 선택해 주세요.</p>
+  <div id='sheetLinks' class='links'></div>
+  <button id='sheetClose' class='close'>닫기</button>
+</div>
+
+<script>
+const TEL1='01083461500';
+const TEL2='01083437150';
+const KAKAO='https://pf.kakao.com/_zzxebX/friend';
+function smsHref(num,body){
+  const e=encodeURIComponent(body);
+  const sep=/iPhone|iPad|iPod/i.test(navigator.userAgent) ? '&' : '?';
+  return `sms:${num}${sep}body=${e}`;
+}
+function openSheet(title,desc,links){
+  document.getElementById('sheetTitle').textContent=title;
+  document.getElementById('sheetDesc').textContent=desc||'';
+  document.getElementById('sheetLinks').innerHTML=links.map(l=>`<a href="${l.href}" ${l.target?'target="_blank" rel="noopener"':''}>${l.label}</a>`).join('');
+  document.getElementById('sheetBg').classList.add('open');
+  document.getElementById('sheet').classList.add('open');
+}
+function closeSheet(){
+  document.getElementById('sheetBg').classList.remove('open');
+  document.getElementById('sheet').classList.remove('open');
+}
+function saveContact(){
+  const isAndroid=/Android/i.test(navigator.userAgent||'');
+  if(isAndroid){
+    const intent='intent://contacts/create#Intent;action=android.intent.action.INSERT;type=vnd.android.cursor.dir/contact;S.name=쿠쿠 렌탈 김건일 팀장;S.phone=01083461500;S.secondary_phone=01083437150;S.company=쿠쿠홈시스 부산(CUCKOO);end';
+    location.href=intent;
+    setTimeout(()=>{location.href='cuckoo_kimgeonil.vcf';},1500);
+  }else{
+    location.href='cuckoo_kimgeonil.vcf';
+  }
+}
+function bind(root){
+  root.querySelectorAll('[data-action]').forEach(el=>{
+    el.addEventListener('click',()=>{
+      const a=el.dataset.action;
+      if(a==='call'){
+        openSheet('전화 상담 연결','원하시는 연결 방식을 선택해 주세요.',[
+          {label:'전화상담연결1',href:`tel:${TEL1}`},
+          {label:'전화상담연결2',href:`tel:${TEL2}`}
+        ]);
+      }else if(a==='sms'){
+        const body='쿠쿠 제품 상담 문의드립니다.';
+        openSheet('문자 상담 요청','원하시는 연결 방식을 선택해 주세요.',[
+          {label:'문자상담요청1',href:smsHref(TEL1,body)},
+          {label:'문자상담요청2',href:smsHref(TEL2,body)}
+        ]);
+      }else if(a==='kakao'){
+        location.href=KAKAO;
+      }else if(a==='save'){
+        saveContact();
+      }else if(a==='home'){
+        window.open('https://github.com/kiuja78/cuckoo','_blank','noopener');
+      }
+    });
+  });
+  root.querySelectorAll('[data-product]').forEach(el=>{
+    el.addEventListener('click',()=>{
+      const item=el.dataset.product;
+      const body=`${item} 상담 문의드립니다. 쿠쿠 렌탈 김건일 팀장님 안내 부탁드립니다.`;
+      openSheet(`${item} 상담`,'원하시는 연결 방식을 선택해 주세요.',[
+        {label:'문자상담요청1',href:smsHref(TEL1,body)},
+        {label:'문자상담요청2',href:smsHref(TEL2,body)}
+      ]);
+    });
+  });
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.visual').forEach(bind);
+  document.getElementById('sheetBg').addEventListener('click',closeSheet);
+  document.getElementById('sheetClose').addEventListener('click',closeSheet);
+});
+</script>
+</body>
+</html>

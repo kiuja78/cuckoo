@@ -3,143 +3,42 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>쿠쿠 렌탈 김건일 팀장 디지털 명함</title>
+<title>쿠쿠 김건일 팀장 맞춤 케어 상담</title>
+<meta name="description" content="렌탈·교체 조건 진단, 안마의자 체험 예약, 제품 상담, AS 요청을 한 번에 연결하는 쿠쿠 김건일 팀장 디지털명함입니다." />
+<meta name="theme-color" content="#f6f0e7" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="CUCKOO 디지털명함" />
+<meta property="og:title" content="쿠쿠 김건일 팀장 맞춤 케어 상담" />
+<meta property="og:description" content="렌탈·교체 조건 진단 · 제품 상담 · 안마의자 체험 예약 · AS 요청" />
+<meta property="og:url" content="https://kiuja78.github.io/cuckoo/card/" />
+<meta property="og:image" content="https://kiuja78.github.io/cuckoo/card/assets/card_latest.png" />
+<meta property="og:image:width" content="941" />
+<meta property="og:image:height" content="1670" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="쿠쿠 김건일 팀장 맞춤 케어 상담" />
+<meta name="twitter:description" content="렌탈·교체 조건 진단 · 제품 상담 · 안마의자 체험 예약 · AS 요청" />
+<meta name="twitter:image" content="https://kiuja78.github.io/cuckoo/card/assets/card_latest.png" />
 <style>
-  * { box-sizing: border-box; }
-  html,body { margin:0; padding:0; background:#f6f0e7; font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Pretendard",sans-serif; }
-  body { min-height:100svh; display:flex; justify-content:center; }
-  .page { width:min(100vw,430px); min-height:100svh; background:#f6f0e7; }
-  .card-wrap { position:relative; width:100%; max-width:430px; margin:0 auto; overflow:hidden; }
-  .card-img { display:block; width:100%; height:auto; user-select:none; -webkit-user-select:none; pointer-events:none; }
-  .hotspot { position:absolute; display:block; border:0; background:rgba(255,255,255,0); cursor:pointer; padding:0; margin:0; text-indent:-9999px; overflow:hidden; touch-action:manipulation; -webkit-tap-highlight-color:rgba(99,119,89,0.18); }
-  .hotspot:active { background:rgba(99,119,89,0.1); }
-  .sheet-bg { position:fixed; inset:0; background:rgba(0,0,0,.38); opacity:0; pointer-events:none; transition:opacity .18s ease; z-index:1000; }
-  .sheet-bg.open { opacity:1; pointer-events:auto; }
-  .sheet { position:fixed; left:50%; bottom:0; transform:translate(-50%,110%); width:min(100vw,430px); background:#fffaf1; border-radius:24px 24px 0 0; box-shadow:0 -16px 42px rgba(0,0,0,.25); padding:20px 16px calc(20px + env(safe-area-inset-bottom)); transition:transform .22s ease; z-index:1001; color:#263022; }
-  .sheet.open { transform:translate(-50%,0); }
-  .sheet h3 { margin:0 0 8px; font-size:21px; line-height:1.25; letter-spacing:-0.6px; }
-  .sheet p { margin:0 0 14px; font-size:14px; color:#66745d; line-height:1.45; }
-  .sheet-links { display:grid; gap:10px; }
-  .sheet-links a, .sheet-close { min-height:56px; border-radius:16px; border:0; text-decoration:none; display:flex; align-items:center; justify-content:center; font-size:17px; font-weight:800; color:#fff; background:#637759; }
-  .sheet-close { width:100%; margin-top:10px; color:#263022; background:#eee8dc; }
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#f6f0e7;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Pretendard",sans-serif;color:#2f241a}body{min-height:100svh;display:flex;justify-content:center}.page{width:min(100vw,430px);min-height:100svh;background:#f6f0e7;position:relative}.card-wrap{position:relative;width:100%;max-width:430px;margin:0 auto;overflow:hidden}.card-img{display:block;width:100%;height:auto;user-select:none;-webkit-user-select:none;pointer-events:none}.hotspot{position:absolute;display:block;border:0;background:rgba(255,255,255,0);cursor:pointer;padding:0;margin:0;text-indent:-9999px;overflow:hidden;touch-action:manipulation;-webkit-tap-highlight-color:rgba(99,119,89,.18)}.hotspot:active{background:rgba(95,67,39,.12)}.floating-as{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:calc(14px + env(safe-area-inset-bottom));z-index:980;min-height:52px;padding:0 18px;border:0;border-radius:999px;background:#5a3515;color:#fff;font-size:15px;font-weight:800;box-shadow:0 10px 24px rgba(90,53,21,.28);display:flex;align-items:center;justify-content:center}.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.38);opacity:0;pointer-events:none;transition:opacity .18s ease;z-index:1000}.sheet-bg.open{opacity:1;pointer-events:auto}.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,110%);width:min(100vw,430px);background:#fffaf1;border-radius:24px 24px 0 0;box-shadow:0 -16px 42px rgba(0,0,0,.25);padding:20px 16px calc(20px + env(safe-area-inset-bottom));transition:transform .22s ease;z-index:1001;color:#263022}.sheet.open{transform:translate(-50%,0)}.sheet h3{margin:0 0 8px;font-size:21px;line-height:1.25;letter-spacing:-.6px;color:#2d241c}.sheet p{margin:0 0 14px;font-size:14px;color:#6e604f;line-height:1.45}.sheet-links{display:grid;gap:10px}.sheet-links a,.sheet-close{min-height:56px;border-radius:16px;border:0;text-decoration:none;display:flex;align-items:center;justify-content:center;text-align:center;font-size:16px;font-weight:800;color:#fff;background:#5a3515}.sheet-links a.secondary{background:#ecd9bf;color:#4a331d}.sheet-close{width:100%;margin-top:10px;color:#3b2d22;background:#eee8dc}
 </style>
 </head>
 <body>
-<main class="page">
-  <section class="card-wrap" aria-label="쿠쿠 렌탈 김건일 팀장 디지털 명함">
-    <img class="card-img" src="assets/card_latest.png" alt="쿠쿠 렌탈 김건일 팀장 디지털 명함" />
-    <div id="hotspots"></div>
-  </section>
-</main>
-<div id="sheetBg" class="sheet-bg"></div>
-<section id="sheet" class="sheet" aria-modal="true" role="dialog">
-  <h3 id="sheetTitle">상담 연결</h3>
-  <p id="sheetDesc">원하시는 연결 방식을 선택해 주세요.</p>
-  <div id="sheetLinks" class="sheet-links"></div>
-  <button id="sheetClose" class="sheet-close" type="button">닫기</button>
-</section>
+<main class="page"><section class="card-wrap" aria-label="쿠쿠 김건일 팀장 디지털 명함"><img class="card-img" src="assets/card_latest.png" alt="쿠쿠 김건일 팀장 맞춤 케어 상담 디지털 명함" /><div id="hotspots"></div></section></main>
+<button type="button" class="floating-as" id="asRequestBtn" aria-label="AS 요청하기">AS 요청</button>
+<div id="sheetBg" class="sheet-bg"></div><section id="sheet" class="sheet" aria-modal="true" role="dialog"><h3 id="sheetTitle">상담 연결</h3><p id="sheetDesc">원하시는 연결 방식을 선택해 주세요.</p><div id="sheetLinks" class="sheet-links"></div><button id="sheetClose" class="sheet-close" type="button">닫기</button></section>
 <script>
-const IMG_W = 941;
-const IMG_H = 1672;
-const TEL1 = '01083461500';
-const TEL2 = '01083437150';
-const KAKAO = 'https://pf.kakao.com/_zzxebX/friend';
-const HOME = 'https://github.com/kiuja78/cuckoo';
-const hotspots = [{"name": "전화 상담하기", "action": "call", "x": 32, "y": 733, "w": 289, "h": 102}, {"name": "문자 상담하기", "action": "sms", "x": 336, "y": 733, "w": 273, "h": 102}, {"name": "카카오톡 상담하기", "action": "kakao", "x": 626, "y": 733, "w": 305, "h": 102}, {"name": "정수기 상담", "action": "product", "product": "정수기", "x": 48, "y": 958, "w": 285, "h": 145}, {"name": "비데 상담", "action": "product", "product": "비데", "x": 346, "y": 958, "w": 269, "h": 145}, {"name": "공기청정기 상담", "action": "product", "product": "공기청정기", "x": 628, "y": 958, "w": 272, "h": 145}, {"name": "안마의자 상담", "action": "product", "product": "안마의자", "x": 48, "y": 1114, "w": 285, "h": 148}, {"name": "매트리스 상담", "action": "product", "product": "매트리스", "x": 346, "y": 1114, "w": 269, "h": 148}, {"name": "기타 제품 상담", "action": "product", "product": "기타 제품", "x": 628, "y": 1114, "w": 272, "h": 148}, {"name": "연락처 저장하기", "action": "save", "x": 27, "y": 1521, "w": 418, "h": 104}, {"name": "홈페이지 보기", "action": "home", "x": 469, "y": 1521, "w": 435, "h": 104}];
-function pct(v,t) { return (v/t*100).toFixed(5)+'%'; }
-function smsHref(num, body) {
-  const encoded = encodeURIComponent(body);
-  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent || '');
-  return `sms:${num}${isIOS ? '&' : '?'}body=${encoded}`;
-}
-function showSheet(title, desc, links) {
-  document.getElementById('sheetTitle').textContent = title;
-  document.getElementById('sheetDesc').textContent = desc || '원하시는 연결 방식을 선택해 주세요.';
-  const box = document.getElementById('sheetLinks');
-  box.innerHTML = '';
-  links.forEach(item => {
-    const a = document.createElement('a');
-    a.textContent = item.label;
-    a.href = item.href;
-    if (item.target) { a.target = '_blank'; a.rel = 'noopener'; }
-    box.appendChild(a);
-  });
-  document.getElementById('sheetBg').classList.add('open');
-  document.getElementById('sheet').classList.add('open');
-}
-function closeSheet() {
-  document.getElementById('sheetBg').classList.remove('open');
-  document.getElementById('sheet').classList.remove('open');
-}
-function saveContact() {
-  const isAndroid = /Android/i.test(navigator.userAgent || '');
-  if (isAndroid) {
-    const intentUrl = 'intent://contacts/create#Intent;'+
-      'action=android.intent.action.INSERT;'+
-      'type=vnd.android.cursor.dir/contact;'+
-      'S.name=쿠쿠 렌탈 김건일 팀장;'+
-      'S.phone=01083461500;'+
-      'S.secondary_phone=01083437150;'+
-      'S.company=쿠쿠홈시스 부산(CUCKOO);'+
-      'end';
-    window.location.href = intentUrl;
-    setTimeout(() => { window.location.href = 'cuckoo_kimgeonil.vcf'; }, 1200);
-  } else {
-    window.location.href = 'cuckoo_kimgeonil.vcf';
-  }
-}
-function handleAction(item) {
-  if (item.action === 'call') {
-    showSheet('전화 상담 연결', '전화번호는 화면에 노출하지 않고 선택 버튼으로 연결합니다.', [
-      {label:'전화상담연결1', href:`tel:${TEL1}`},
-      {label:'전화상담연결2', href:`tel:${TEL2}`}
-    ]);
-    return;
-  }
-  if (item.action === 'sms') {
-    const body = '쿠쿠 제품 상담 문의드립니다.';
-    showSheet('문자 상담 요청', '문자 상담을 원하시는 연결 버튼을 선택해 주세요.', [
-      {label:'문자상담요청1', href:smsHref(TEL1, body)},
-      {label:'문자상담요청2', href:smsHref(TEL2, body)}
-    ]);
-    return;
-  }
-  if (item.action === 'kakao') {
-    window.location.href = KAKAO;
-    return;
-  }
-  if (item.action === 'product') {
-    const product = item.product || '제품';
-    const body = `${product} 상담 문의드립니다. 쿠쿠 렌탈 김건일 팀장님 안내 부탁드립니다.`;
-    showSheet(`${product} 상담`, '상담 요청을 보낼 번호를 선택해 주세요.', [
-      {label:'문자상담요청1', href:smsHref(TEL1, body)},
-      {label:'문자상담요청2', href:smsHref(TEL2, body)}
-    ]);
-    return;
-  }
-  if (item.action === 'save') { saveContact(); return; }
-  if (item.action === 'home') { window.open(HOME, '_blank', 'noopener'); return; }
-}
-function renderHotspots() {
-  const root = document.getElementById('hotspots');
-  hotspots.forEach(item => {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'hotspot';
-    btn.setAttribute('aria-label', item.name);
-    btn.style.left = pct(item.x, IMG_W);
-    btn.style.top = pct(item.y, IMG_H);
-    btn.style.width = pct(item.w, IMG_W);
-    btn.style.height = pct(item.h, IMG_H);
-    btn.addEventListener('click', () => handleAction(item));
-    root.appendChild(btn);
-  });
-}
-document.addEventListener('DOMContentLoaded', () => {
-  renderHotspots();
-  document.getElementById('sheetBg').addEventListener('click', closeSheet);
-  document.getElementById('sheetClose').addEventListener('click', closeSheet);
-});
+const IMG_W=941, IMG_H=1670, TEL1='01083461500', TEL2='01083437150', KAKAO='https://pf.kakao.com/_zzxebX/friend', HOME='https://github.com/kiuja78/cuckoo';
+const hotspots=[{name:'무료 조건 진단받기',action:'sheet',title:'무료 조건 진단',desc:'문자 또는 카카오톡으로 편하게 문의해 주세요.',links:[{label:'문자상담요청1',hrefType:'sms',number:'TEL1',body:'렌탈/교체 조건 진단 문의드립니다. 현재 조건이 유리한지 확인 부탁드립니다.'},{label:'문자상담요청2',hrefType:'sms',number:'TEL2',body:'렌탈/교체 조건 진단 문의드립니다. 현재 조건이 유리한지 확인 부탁드립니다.'},{label:'카카오톡으로 문의하기',href:KAKAO,target:true,secondary:true}],x:34,y:626,w:293,h:100},{name:'카카오톡으로 문의하기',action:'kakao',x:343,y:626,w:303,h:100},{name:'전화로 간단 상담',action:'call',x:658,y:626,w:279,h:100},{name:'현재 렌탈료 점검',action:'smsSheet',title:'현재 렌탈료 점검',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'현재 렌탈료 점검 문의드립니다. 현재 사용 중인 제품 기준으로 확인 부탁드립니다.',x:56,y:818,w:130,h:144},{name:'만기·교체 가능시점 확인',action:'smsSheet',title:'만기·교체 가능시점 확인',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'만기 및 교체 가능 시점 문의드립니다. 확인 부탁드립니다.',x:198,y:818,w:130,h:144},{name:'재렌탈·패키지 조건 비교',action:'smsSheet',title:'재렌탈·패키지 조건 비교',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'재렌탈·패키지 조건 비교 문의드립니다. 유리한 조건 안내 부탁드립니다.',x:340,y:818,w:130,h:144},{name:'멤버십·관리 조건 상담',action:'smsSheet',title:'멤버십·관리 조건 상담',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'멤버십 및 관리 조건 상담 문의드립니다. 안내 부탁드립니다.',x:482,y:818,w:130,h:144},{name:'기존 고객 혜택 확인',action:'smsSheet',title:'기존 고객 혜택 확인',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'기존 고객 혜택 문의드립니다. 적용 가능한 내용 확인 부탁드립니다.',x:624,y:818,w:130,h:144},{name:'우리 집 맞춤 제품 안내',action:'smsSheet',title:'우리 집 맞춤 제품 안내',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'우리 집 상황에 맞는 제품 안내 문의드립니다. 추천 부탁드립니다.',x:766,y:818,w:130,h:144},{name:'안마의자 체험 예약하기',action:'sheet',title:'안마의자 체험 예약',desc:'원하시는 예약 문의 방식을 선택해 주세요.',links:[{label:'문자상담요청1',hrefType:'sms',number:'TEL1',body:'안마의자 체험 예약 문의드립니다. 가능한 날짜와 시간 안내 부탁드립니다.'},{label:'문자상담요청2',hrefType:'sms',number:'TEL2',body:'안마의자 체험 예약 문의드립니다. 가능한 날짜와 시간 안내 부탁드립니다.'},{label:'카카오톡으로 문의하기',href:KAKAO,target:true,secondary:true}],x:337,y:1133,w:282,h:79},{name:'체험 가능 시간 문의하기',action:'sheet',title:'체험 가능 시간 문의',desc:'원하시는 문의 방식을 선택해 주세요.',links:[{label:'문자상담요청1',hrefType:'sms',number:'TEL1',body:'안마의자 체험 가능 시간 문의드립니다. 원하는 시간대 안내 부탁드립니다.'},{label:'문자상담요청2',hrefType:'sms',number:'TEL2',body:'안마의자 체험 가능 시간 문의드립니다. 원하는 시간대 안내 부탁드립니다.'},{label:'카카오톡으로 문의하기',href:KAKAO,target:true,secondary:true}],x:632,y:1133,w:258,h:79},{name:'정수기 상담',action:'smsSheet',title:'정수기 상담',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'정수기 상담 문의드립니다. 안내 부탁드립니다.',x:56,y:1321,w:128,h:137},{name:'비데 상담',action:'smsSheet',title:'비데 상담',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'비데 상담 문의드립니다. 안내 부탁드립니다.',x:199,y:1321,w:128,h:137},{name:'공기청정기 상담',action:'smsSheet',title:'공기청정기 상담',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'공기청정기 상담 문의드립니다. 안내 부탁드립니다.',x:342,y:1321,w:128,h:137},{name:'안마의자 상담',action:'smsSheet',title:'안마의자 상담',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'안마의자 상담 문의드립니다. 안내 부탁드립니다.',x:485,y:1321,w:128,h:137},{name:'매트리스 상담',action:'smsSheet',title:'매트리스 상담',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'매트리스 상담 문의드립니다. 안내 부탁드립니다.',x:628,y:1321,w:128,h:137},{name:'기타 제품 상담',action:'smsSheet',title:'기타 제품 상담',desc:'문자 상담을 원하시는 번호를 선택해 주세요.',body:'기타 제품 상담 문의드립니다. 안내 부탁드립니다.',x:771,y:1321,w:128,h:137},{name:'연락처 저장하기',action:'save',x:35,y:1591,w:436,h:79},{name:'홈페이지 보기',action:'home',x:499,y:1591,w:406,h:79}];
+function pct(v,t){return(v/t*100).toFixed(5)+'%'}; function resolveNumber(key){return key==='TEL2'?TEL2:TEL1}; function smsHref(num,body){const encoded=encodeURIComponent(body);const isIOS=/iPhone|iPad|iPod/i.test(navigator.userAgent||'');return `sms:${num}${isIOS?'&':'?'}body=${encoded}`};
+function normalizeLinks(links){return links.map(item=>{if(item.hrefType==='sms'){return{label:item.label,href:smsHref(resolveNumber(item.number),item.body||''),target:false,secondary:!!item.secondary}} if(item.hrefType==='tel'){return{label:item.label,href:`tel:${resolveNumber(item.number)}`,target:false,secondary:!!item.secondary}} return item})}
+function showSheet(title,desc,links){document.getElementById('sheetTitle').textContent=title;document.getElementById('sheetDesc').textContent=desc||'원하시는 연결 방식을 선택해 주세요.';const box=document.getElementById('sheetLinks');box.innerHTML='';normalizeLinks(links).forEach(item=>{const a=document.createElement('a');a.textContent=item.label;a.href=item.href;if(item.target){a.target='_blank';a.rel='noopener'}if(item.secondary)a.classList.add('secondary');box.appendChild(a)});document.getElementById('sheetBg').classList.add('open');document.getElementById('sheet').classList.add('open')}
+function closeSheet(){document.getElementById('sheetBg').classList.remove('open');document.getElementById('sheet').classList.remove('open')}
+function saveContact(){const isAndroid=/Android/i.test(navigator.userAgent||'');if(isAndroid){const intentUrl='intent://contacts/create#Intent;'+'action=android.intent.action.INSERT;'+'type=vnd.android.cursor.dir/contact;'+'S.name=쿠쿠 렌탈 김건일 팀장;'+'S.phone=01083461500;'+'S.secondary_phone=01083437150;'+'S.company=쿠쿠홈시스 부산(CUCKOO);'+'end';window.location.href=intentUrl;setTimeout(()=>{window.location.href='cuckoo_kimgeonil.vcf'},1200)}else{window.location.href='cuckoo_kimgeonil.vcf'}}
+function handleAction(item){if(item.action==='call'){showSheet('전화 상담 연결','원하시는 번호를 선택해 주세요.',[{label:'전화상담연결1',hrefType:'tel',number:'TEL1'},{label:'전화상담연결2',hrefType:'tel',number:'TEL2'}]);return} if(item.action==='kakao'){window.location.href=KAKAO;return} if(item.action==='home'){window.open(HOME,'_blank','noopener');return} if(item.action==='save'){saveContact();return} if(item.action==='smsSheet'){showSheet(item.title||item.name,item.desc||'문자 상담을 원하시는 번호를 선택해 주세요.',[{label:'문자상담요청1',hrefType:'sms',number:'TEL1',body:item.body||''},{label:'문자상담요청2',hrefType:'sms',number:'TEL2',body:item.body||''},{label:'카카오톡으로 문의하기',href:KAKAO,target:true,secondary:true}]);return} if(item.action==='sheet'){showSheet(item.title||item.name,item.desc||'원하시는 연결 방식을 선택해 주세요.',item.links||[]);return}}
+function renderHotspots(){const root=document.getElementById('hotspots');hotspots.forEach(item=>{const btn=document.createElement('button');btn.type='button';btn.className='hotspot';btn.setAttribute('aria-label',item.name);btn.style.left=pct(item.x,IMG_W);btn.style.top=pct(item.y,IMG_H);btn.style.width=pct(item.w,IMG_W);btn.style.height=pct(item.h,IMG_H);btn.addEventListener('click',()=>handleAction(item));root.appendChild(btn)})}
+function openAsRequest(){showSheet('AS 요청','문자, 카카오톡 또는 전화로 편하게 요청해 주세요.',[{label:'문자AS요청1',hrefType:'sms',number:'TEL1',body:'AS 요청드립니다. 사용 중인 제품과 증상 확인 부탁드립니다.'},{label:'문자AS요청2',hrefType:'sms',number:'TEL2',body:'AS 요청드립니다. 사용 중인 제품과 증상 확인 부탁드립니다.'},{label:'카카오톡으로 AS 문의하기',href:KAKAO,target:true,secondary:true},{label:'전화AS상담1',hrefType:'tel',number:'TEL1',secondary:true},{label:'전화AS상담2',hrefType:'tel',number:'TEL2',secondary:true}])}
+document.addEventListener('DOMContentLoaded',()=>{renderHotspots();document.getElementById('sheetBg').addEventListener('click',closeSheet);document.getElementById('sheetClose').addEventListener('click',closeSheet);document.getElementById('asRequestBtn').addEventListener('click',openAsRequest)})
 </script>
 </body>
 </html>
